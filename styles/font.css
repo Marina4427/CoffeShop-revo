@@ -1,0 +1,15 @@
+  @font-face {
+    font-family: Nunito;
+    src: url(../assets/fonts/Nunito-Variable-Variable.woff2) format('woff2');
+    font-weight: 200 800;
+    font-display: swap;
+    font-style: normal;  
+  }
+  
+  @font-face {
+    font-family: Montserrat;
+    src: url(../assets/fonts/Montserrat-Variable.woff2) format("woff2");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal
+}

@@ -1,0 +1,52 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Скрываем секции по умолчанию */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Класс, который добавится через JS */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fly-in {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20vw);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-100vw);
+  animation: fly-in 2.5s ease-out 1s forwards;
+}
+
+.animated:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.animated:nth-child(3) {
+  animation-delay: 0.8s;
+}
