@@ -1,0 +1,244 @@
+.header {
+  background-image: linear-gradient(90deg, #f9fbff 60%, #415167 60%);
+}
+
+.header__container {
+  display: flex;
+  position: relative;
+}
+
+.header__row-left {
+  position: relative;
+  padding-inline: 12.5% 9%;
+}
+
+.logo-link {
+  display: inline-block;
+  margin-right: 127px;
+}
+
+.header__column {
+  padding-top: 72px;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 64px;
+  margin-left: 15px;
+  z-index: 1;
+}
+
+.header__img {
+  width: 124px;
+  height: 40px;
+  z-index: 15;
+  position: absolute;
+  background-color: transparent;
+  top: 72px;
+}
+
+.title-1 .active {
+  margin-left: -15px;
+  padding: 10px 15px;
+}
+
+.background {
+  color: #fff;
+  background-color: #c7a17a;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__row-right {
+  padding-left: 57px;
+  padding-top: 89px;
+  padding-right: 8%;
+  z-index: 5;
+  position: relative;
+}
+
+.header__row-center {
+  position: relative;
+  display: flex;
+}
+
+.header__img-bg {
+  width: max(447px, 100%);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header__row-center__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(21, 29, 40, 0.6);
+  mix-blend-mode: overlay;
+}
+
+/* анимация */
+@keyframes fly-in {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20vw);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-100vw);
+  animation: fly-in 2.5s ease-out 1s forwards;
+}
+
+.animated:nth-child(2) {
+  animation-delay: 1.3s;
+}
+.animated:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+/* ----------------- */
+
+@media screen and (min-width: 577px) and (max-width: 1024px) {
+  .header__row-right {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .header__row-right {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .blur {
+    filter: blur(3px);
+  }	
+  
+  .header {
+    background-image: none;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .header__title {
+    top: 60px;
+    left: 0px;
+  }
+
+  .header__row-left {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0;
+  }
+
+  .burger-menu {
+    display: block;
+    width: 100px;
+    padding-inline: 0;
+    position: relative;
+  }
+
+  .burger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 100px;
+  }
+
+  .line {
+    width: 70%;
+    height: 4px;
+    background-color: #c7a17a;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .header__container {
+    flex-direction: column;
+    row-gap: 300px;
+    padding-top: 15px;
+  }
+
+  .header__row-left {
+    padding-inline: 15px;
+  }
+
+  .title {
+    color: #151d28;
+  }
+
+  .background {
+    color: #edf0f5;
+  }
+
+  .header__row-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #415167;
+    z-index: 10;
+    padding-top: 150px;
+    transform: translateX(-100%); /* Начальное положение - за экраном */
+    opacity: 0; /* Прозрачность 0 */
+    visibility: hidden; /* Не кликабельно */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
+      visibility 0s 0.5s;
+  }
+
+  /* Когда меню открыто */
+  .header__row-right.open {
+    transform: translateX(0); /* Выдвигаем */
+    opacity: 1; /* Делаем видимым */
+    visibility: visible; /* Делаем кликабельным */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .header__img {
+    top: 0;
+  }
+
+  .header__img.open {
+    filter: invert(1);
+  }
+
+  .burger-icon.open {
+    position: absolute;
+    right: -35px;
+    z-index: 15;
+    width: 100px;
+  }
+
+  .burger-icon.open .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+    width: 50%;
+  }
+
+  .burger-icon.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-icon.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    width: 50%;
+  }
+}

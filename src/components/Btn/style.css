@@ -1,0 +1,20 @@
+.btn_buy {
+  background-color: #c7a17a;
+  color: #f9fbff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.375;
+  border-radius: 20px;
+  border: none;
+  padding: 7px 13px;
+  max-width: fit-content;
+}
+
+.btn__delete {
+  margin-top: 25px;
+  color: lightgrey;
+  border: 1px solid lightgray;
+  padding: 4px 8px;
+  font-size: 13px;
+  box-shadow: 0px 0px 4px 0px lightgray;
+}

@@ -1,0 +1,161 @@
+.swiper__combo {
+  width: 1200px;
+  padding: 15px;
+
+  .img-container {
+    display: flex;
+    flex-shrink: 0;
+    height: 256px;
+  }
+
+  .img__product {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .card__desc {
+    text-align: left;
+    padding: 6%;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .slider-card {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .swiper__card {
+    display: flex;
+    background-color: #edf0f5;
+    align-items: center;
+    flex-direction: column;
+    transition: box-shadow .5s;
+   
+  }
+
+  .link__container {
+    display: flex;
+    min-width: 245px;
+    column-gap: 16%;
+    align-items: center;
+    margin-top: 35px;
+    flex-direction: row;
+  }
+
+  .card__price {
+    color: #c7a17a;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    padding-bottom: 8px;
+  }
+
+  .card__old-price {
+    color: #415167;
+    font-style: italic;
+    font-weight: 300;
+    text-decoration: line-through;
+    font-size: 16px;
+    padding-left: 7px;
+  }
+
+  .card__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    color: #232c38;
+    padding-bottom: 24px;
+    height: 65px;
+  }
+
+  .card__text {
+    font-weight: 300;
+    font-size: 16px;
+    color: #151d28;
+    padding: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.375rem;
+    max-height: 2.75rem;
+  }
+
+  .card__link-more {
+    color: #415167;
+    font-size: 16px;
+    line-height: 1.375;
+    font-weight: 700;
+  }
+
+  .img-container {
+    max-width: 360px;
+  }
+
+  .combo__img {
+    width: 100%;
+    height: auto;
+    background-color: #edf0f5;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .old-prise {
+    font-size: 14px;
+    color: #415167;
+    text-decoration: line-through;
+    display: inline-block;
+    padding-left: 5px;
+  }
+}
+
+.slick__list-combo {
+  overflow: hidden;
+  position: relative;
+}
+
+.slick__list-combo .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 21%;
+  background: rgba(65, 81, 103, 0.6);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slick__list-combo .b-next {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: absolute;
+  top: 39%;
+  right: 6%;
+  z-index: 5;
+  border: none;
+  background-image: url("../../../assets/arrow.png");
+  background-color: transparent;
+  background-position: center;
+  
+}
+
+.swiper__combo .swiper__card:hover {
+  box-shadow: 0px 4px 24px 0px rgba(205, 205, 205, 0.5)
+  
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .slick__list-combo .overlay {
+    width: 0;
+  }
+
+  .slick__list-combo {
+    margin-left: 0;
+  }
+}
